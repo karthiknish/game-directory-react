@@ -84,8 +84,13 @@ function GameDetail({ pathId }) {
               <p>{game.description_raw}</p>
             </Description>
             <div className="gallery">
+              <h3>
+                <strong>Screenshots</strong>
+              </h3>
+
               {screen.results.map((screen) => (
                 <img
+                  style={{ marginBottom: "10px", borderRadius: "10px" }}
                   src={smallImage(screen.image, 1280)}
                   key={screen.id}
                   alt={screen.image}
