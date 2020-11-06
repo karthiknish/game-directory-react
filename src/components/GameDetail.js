@@ -83,7 +83,15 @@ function GameDetail({ pathId }) {
             <Description>
               <p>{game.description_raw}</p>
             </Description>
-            <div className="gallery"></div>
+            <div className="gallery">
+              {screen.results.map((screen) => (
+                <img
+                  src={smallImage(screen.image, 1280)}
+                  key={screen.id}
+                  alt={screen.image}
+                />
+              ))}
+            </div>
           </Detail>
         </CardShadow>
       )}
